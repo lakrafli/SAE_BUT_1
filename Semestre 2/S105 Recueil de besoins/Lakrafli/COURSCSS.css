@@ -1,0 +1,391 @@
+/*album des photos*/
+
+*{box-sizing:border-box}
+
+img{
+
+max-width: 100%;
+
+}
+
+/*pour le saut de page, on cree une class que l'on met en display:none*/
+.target{
+
+display: none
+
+}
+
+
+/* englobe le slider */
+
+.cadre_diapo{
+
+max-width: 600px;
+margin: 2rem auto;
+overflow: hidden;
+  
+  }
+
+.interieur_diapo{
+  
+display: flex;
+width: 400%;
+transition: transform .6s ease-in-out
+  
+  }
+
+.description{
+
+position: relative;
+
+}
+
+.description span{
+
+position: absolute;
+left: 0;
+top: 2%;
+font-size: 75%;
+display: flex;
+padding: .5rem;
+justify-content: center;
+color: white;
+background: hsla(0,0%,0%,.35)
+  
+  }
+  
+  
+#votre_id1:target ~ .cadre_diapo .interieur_diapo{
+
+transform:translatex(0)
+
+}/*image 1*/
+
+#votre_id2:target ~ .cadre_diapo .interieur_diapo{
+
+transform:translatex(-25%)
+
+}/*image 2*/
+
+#votre_id3:target ~ .cadre_diapo .interieur_diapo{
+
+transform:translatex(-50%)
+
+}/*image 3*/
+
+#votre_id4:target ~ .cadre_diapo .interieur_diapo{
+
+transform:translatex(-75%)
+
+}/*image 4*/
+
+
+
+
+
+/*navigation avec images miniatures*/
+.navigation_diapo{
+  
+display: flex; /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
+list-style-type: none;
+margin: 0;
+padding: 0
+  
+  }
+
+.navigation_diapo li {
+  
+  padding: .25rem;
+  
+  }
+
+.navigation_diapo img{
+
+border: 3px solid white;
+box-shadow:0 0 5px hsla(0,0%,0%,.4);
+
+  
+  }
+  
+  
+  @media (min-width:31.25rem){
+    
+    .description span{
+      
+      font-size: initial
+    
+    }
+  
+  }
+
+
+
+
+
+
+
+
+
+/** Structure */
+#header  .tools ul.a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+  margin-left: 15px; }
+  #header  .b ul.a > li {
+    margin-left: 5px; }
+p, ul, ol {
+  margin-bottom: 20px; }
+
+ul, ol,
+.ce-intext.ce-left ol, .ce-intext.ce-left ul {
+  padding-left: 15px;
+  overflow: visible; }
+
+p {
+  line-height: 22px; }
+   
+/**/
+body {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden; }
+  body.lock-position {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: relative; }
+    body.lock-position:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #932980;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10; }
+    
+
+h2, .h2 {
+  font-size: 22px;
+  color: #f1f90e;
+  font-family: "DM Serif Display", Arial, Helvetica, sans-serif;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 15px 0; }
+
+.btn {
+  background: #ebeb06;
+  color: rgb(251, 251, 251);
+  border: 2px solid #020002;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 5px 15px;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  font-size: 15px; }
+  .btn:hover {
+    background: #fff;
+    color: #932980; }
+
+main {
+  padding-top: 60px;
+  overflow: hidden; }
+  main .row {
+    margin: 0 -25px; }
+    main .col-md-6{    padding: 0 230px; }
+  main ul {
+    list-style: none; }
+    main ul li:before {
+      content: "";
+      font-weight: bold;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #fbff04;
+      border-radius: 100%;
+      margin-right: 8px;
+      margin-left: -10px;
+      line-height: 1;
+      vertical-align: middle;
+      text-align: center; }
+    
+      main .ce-bodytext{    padding: 0 230px; }
+/*headear*/
+    #header .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: relative;
+      top: 0; }
+      #header .header-container .tools ul.social {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 80px;
+          margin-left: 15px; }
+          #header .header-container .tools ul.social > li {
+            margin-left: 5px; }
+            #header .header-container .tools ul.social > li:first-child {
+              margin: 0; }
+          #header .header-container .tools ul.social img {
+            display: block;
+            width: 20px; }
+    
+/*body */
+
+body.home .header-home {
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 650px;
+  margin-bottom: 0;
+  overflow: hidden;
+  z-index: 0;
+  box-shadow: none; }
+  body.home .header-home:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%; }
+    
+  body.home .header-home > .container {
+    position: relative;
+    z-index: 10;
+    height: 100%; }
+    /*logo*/
+  body.home .header-home .logo {
+    position: absolute;
+    left: 20px;
+    top: 40px; }
+  /*les petit plays dans les grandes */
+  body.home .header-home .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 50px 150px 120px; }
+    /*les deux barre*/
+    body.home .header-home .home-content:after, body.home .header-home .home-content:before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 70px;
+      background: #000000; }
+   /*les petit plays dans les grandes */
+
+    body.home .header-home .home-content .title {
+      color: #a2bd17;
+      font-size: 40px;
+      line-height: 50px;
+      font-family: Impact, Charcoal, sans-serif;
+      margin-bottom: 20px; }
+   /* la grande photo*/ 
+  
+  
+
+/*fotter*/
+  body.home #header.not-sticky:not(.open) .header-container {
+    background: rgb(238, 255, 3);
+    padding: 0 20px; }
+    body.home #header.not-sticky:not(.open) .header-container .logo {
+      display: none; }
+  /*Footer*/
+
+footer{
+  width: 100%;
+  padding: 30px 0 0 20px;
+  background: #eeeeee;
+}
+
+
+footer .footer_main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+  text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+  color: #000;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+  margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+  color: #fac031;
+}
+
+footer .end{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+} 
+/*designe b*/
+footer .end span{
+  color: #1800ec;
+  margin-left: 10px;
+}
+/*ascenseur*/
+::-webkit-scrollbar{
+  width: 13px;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+  background: #fac031;
+  border-radius: 15px;
+}
+ 
+/*2EME  grande PHOTO*/
+.bloc--title {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 70px;
+  padding: 25px 30px; }
+  
+  .bloc--title .bloc--title-container {
+    background: rgba(236, 240, 5, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 15%; }
+    
+
+
+
+
+    
+      
+    
