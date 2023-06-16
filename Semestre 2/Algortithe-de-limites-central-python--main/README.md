@@ -1,1 +1,0 @@
-# Algortithe-de-limites-central-python-
